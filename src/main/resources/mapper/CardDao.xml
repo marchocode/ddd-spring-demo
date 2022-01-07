@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.chaobei.demo.infrastructure.dao.CardDao">
+    <resultMap id="BaseResultMap" type="xyz.chaobei.demo.infrastructure.po.CardEntity">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="card_no" jdbcType="VARCHAR" property="cardNo"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id
+        , user_id, `name`, card_no
+    </sql>
+    <select id="listCardsByUserId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from card
+        where user_id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="xyz.chaobei.demo.infrastructure.po.CardEntity"
+            useGeneratedKeys="true">
+        insert into card (user_id, `name`, card_no)
+        values (#{userId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{cardNo,jdbcType=VARCHAR})
+    </insert>
+
+</mapper>
