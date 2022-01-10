@@ -9,7 +9,7 @@ import xyz.chaobei.demo.domain.repository.ICardRepository;
 import xyz.chaobei.demo.domain.repository.IUserRepository;
 import xyz.chaobei.demo.infrastructure.po.CardEntity;
 import xyz.chaobei.demo.infrastructure.po.UserEntity;
-import xyz.chaobei.demo.interfaces.service.UserService;
+import xyz.chaobei.demo.application.service.UserService;
 
 import javax.annotation.Resource;
 import java.util.LinkedList;

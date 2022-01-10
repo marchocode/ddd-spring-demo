@@ -1,4 +1,4 @@
-package xyz.chaobei.demo.interfaces.service;
+package xyz.chaobei.demo.application.service;
 
 
 import xyz.chaobei.demo.domain.model.aggregates.UserCardBO;

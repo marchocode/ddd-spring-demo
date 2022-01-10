@@ -1,9 +1,9 @@
-package xyz.chaobei.demo.application.facade;
+package xyz.chaobei.demo.interfaces.facade;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import xyz.chaobei.demo.interfaces.service.UserService;
+import xyz.chaobei.demo.application.service.UserService;
 
 import javax.annotation.Resource;
 
